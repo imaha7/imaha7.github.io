@@ -98,86 +98,6 @@ export class PokemonProvider extends React.Component {
   renamepokemon = newpokemon => {
     let currentPokemon = this.state.pokemon;
     let filteredPokemon = this.state.pokemon.filter(function (pokemon) {
-      // if(newpokemon == pokemon.nickname){
-      //   Swal.fire({
-      //     title: 'Rename Your Pokemon!',
-      //     icon: 'success',
-      //     text: "Please Enter A New Nickname For This Pokemon",
-      //     input: 'text',
-      //     inputValue: ''+ newpokemon +'',
-      //     inputPlaceholder: 'Enter your new pokemon nickname',
-      //     showCancelButton: true,
-      //     inputValidator: (val) => {
-      //       if (!val) {
-      //         return 'You need to fill nickname!'
-      //       }
-      //     }
-      //   }).then((result) => {
-      //     if (result.value) {
-      //       pokemon.nickname = result.value;
-
-      //       // newpokemon = [{ name: newpokemon[0].name, nickname: result.value }]
-      //       // if (JSON.parse(localStorage.getItem('MyPokemon')) !== null || JSON.parse(localStorage.getItem('MyPokemon')) !== undefined) {
-      //       //   this.state.pokemon.forEach(p => {
-      //       //     arrNickname.push(p.nickname);
-      //       //   });
-      //       //   if (arrNickname.includes(newpokemon[0].nickname)) {
-      //       //     Swal.fire({
-      //       //       title: 'Sorry!',
-      //       //       input: 'text',
-      //       //       icon: 'error',
-      //       //       text: 'Please Enter A Different Nickname For This Pokemon',
-      //       //       inputPlaceholder: 'Your Pokemon Nickname',
-      //       //       inputValue: '',
-      //       //       showCancelButton: false,
-      //       //       allowOutsideClick: false,
-      //       //       allowEscapeKey: false,
-      //       //       inputValidator: (value) => {
-      //       //         if (arrNickname.includes(value)) {
-      //       //           return 'You need to fill with different nickname!'
-      //       //         } else if (!value) {
-      //       //           return 'You need to fill nickname!'
-      //       //         }
-      //       //       }
-      //       //     }).then((result) => {
-      //       //       if (result.value) {
-      //       //         newpokemon[0].nickname = result.value;
-      //       //         localStorage.setItem('MyPokemon', JSON.stringify(this.state.pokemon.concat(newpokemon)));
-      //       //         this.setState({ pokemon: JSON.parse(localStorage.getItem('MyPokemon')) });
-      //       //         Swal.fire({
-      //       //           icon: 'success',
-      //       //           title: 'Success',
-      //       //           text: 'Pokemon ' + newpokemon[0].name + ' with Nickname : ' + newpokemon[0].nickname + ' Has Been Added Successfully!',
-      //       //           showConfirmButton: false,
-      //       //           timer: 2000
-      //       //         });
-      //       //       }
-      //       //     });
-      //       //   } else {
-      //       //     localStorage.setItem('MyPokemon', JSON.stringify(this.state.pokemon.concat(newpokemon)));
-      //       //     this.setState({ pokemon: JSON.parse(localStorage.getItem('MyPokemon')) });
-      //       //     Swal.fire({
-      //       //       icon: 'success',
-      //       //       title: 'Success',
-      //       //       text: 'Pokemon ' + newpokemon[0].name + ' with Nickname : ' + newpokemon[0].nickname + ' Has Been Renamed Successfully!',
-      //       //       showConfirmButton: false,
-      //       //       timer: 2000
-      //       //     });
-      //       //   }
-      //       // } else {
-      //       //   localStorage.setItem('MyPokemon', JSON.stringify(this.state.pokemon.concat(newpokemon)));
-      //       //   this.setState({ pokemon: JSON.parse(localStorage.getItem('MyPokemon')) });
-      //       //   Swal.fire({
-      //       //     icon: 'success',
-      //       //     title: 'Success',
-      //       //     text: 'Pokemon ' + newpokemon[0].name + ' with Nickname : ' + newpokemon[0].nickname + ' Has Been Renamed Successfully!',
-      //       //     showConfirmButton: false,
-      //       //     timer: 2000
-      //       //   });
-      //       // }
-      //     }
-      //   });
-      // }
       return newpokemon == pokemon.nickname;
     });
 
@@ -218,6 +138,7 @@ export class PokemonProvider extends React.Component {
           showConfirmButton: false,
           timer: 2000
         });
+        arrNickname = [];
       }
     });
   };
