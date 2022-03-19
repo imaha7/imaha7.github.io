@@ -17,7 +17,7 @@ class MyPokemon extends Component {
     render() {
         return (
             <PokemonConsumer>
-                {({ pokemon, releasepokemon, releaseallpokemon }) => (
+                {({ pokemon, releasepokemon, releaseallpokemon, renamepokemon }) => (
                     <React.Fragment>
                         <Container fluid={true} className="py-5">
                             <Container className="pokemonList">
@@ -44,6 +44,7 @@ class MyPokemon extends Component {
                                                             <CardTitle className="text-capitalize text-center mb-3" tag="h4">{nickname}</CardTitle>
                                                             <CardSubtitle tag="h6" className="text-capitalize bg-warning text-center mx-4 mb-3 p-2" style={{borderRadius: "30px"}}>{name}</CardSubtitle>
                                                             <CardFooter className="py-3" style={{ borderBottomRightRadius: "15px", borderBottomLeftRadius: "15px", }}>
+                                                                <Button className="w-100 text-capitalize text-center mb-3" color="warning" onClick={() => renamepokemon(nickname)} style={{ fontSize: "20px", borderRadius: "15px" }}><i className="fa-solid fa-edit" style={{marginRight: "8px"}}></i>Rename</Button>
                                                                 <Button className="w-100 text-capitalize text-center" color="danger" onClick={() => releasepokemon(nickname)} style={{ fontSize: "20px", borderRadius: "15px" }}><i className="fa-solid fa-trash" style={{marginRight: "8px"}}></i>Release</Button>
                                                             </CardFooter>
                                                         </Card>

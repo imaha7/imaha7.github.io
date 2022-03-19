@@ -24,9 +24,14 @@ class Home extends Component {
                                 <h1 className="display-4 text-light">Welcome to Pokemon</h1>
                                 <h2 className="lead text-light">
                                     Project Assignment<br />
-                                    Web Platform Engineers - Tokopedia
+                                    ReactJS Programmer Test - PT. Zegen Solusi Mandiri
                                 </h2>
                                 <p className="text-light" style={{fontWeight: "bold",}}>Created by {process.env.REACT_APP_CREATOR}</p>
+
+                                <h2 className="lead text-light">
+                                    <b style={{fontWeight: "bold",}}>Notes :</b><br/> 50% Success Opportunity Pokemon Caught<br/> 50% Fail Opportunity Pokemon Caught. <br/>
+                                    Well Good Luck!
+                                </h2>
                             </Jumbotron>
                         </Col>
                     </Row>
